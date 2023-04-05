@@ -5,7 +5,8 @@ import numpy as np
 import datetime
 
 # import file, DO NOT CHANGE FILE NAME ON DOWNLOAD FROM CME GATEWAY
-df = pd.read_csv('CMEgateway.csv')
+url = 'https://github.com/sirlazy4077/cme_gateway/blob/main/CMEgateway.csv?raw=true'
+df = pd.read_csv(url)
 
 # drop the non-date and non-credit type and amount columns
 df.drop(df.iloc[:, 0:4], inplace=True, axis=1)
